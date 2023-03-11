@@ -1,5 +1,17 @@
 package main
 
-func main() {
+import (
+	"gvb-server/core"
+	"gvb-server/global"
+	"gvb-server/router"
+)
 
+func main() {
+	core.InitConf()                              // 初始化配置文件
+	global.Log = core.InitLogger()               // 初始化日志
+	global.DB = core.InitGorm()                  // 初始化gorm
+	router := router.InitRouter()                // 初始化路由
+	srvName := global.Config.System.GetSrvName() // 获取服务名称
+	addr := global.Config.System.Addr()          // 获取启动地址
+	global.Run(router, srvName, addr, nil)       // 启动服务 (调用global中的Run函数 优雅启停)
 }

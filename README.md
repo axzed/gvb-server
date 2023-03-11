@@ -1,1 +1,1 @@
-## gvb-server是GVB博客项目的服务端模块代码，基于Go进行开发。
+## gvb-server是GVB博客项目的服务端模块代码，基于Go进行开发。
