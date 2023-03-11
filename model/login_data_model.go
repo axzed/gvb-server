@@ -1,5 +1,7 @@
 package model
 
+import "gvb-server/model/ctype"
+
 // LoginDataModel 统计用户登录数据 id, 用户id, 用户昵称，用户token，登录设备，登录时间
 type LoginDataModel struct {
 	MODEL

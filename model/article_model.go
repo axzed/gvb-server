@@ -1,7 +1,7 @@
 package model
 
 import (
-	"gvb_server/models/ctype"
+	"gvb-server/model/ctype"
 )
 
 type ArticleModel struct {

@@ -1,5 +1,7 @@
 package model
 
+import "gvb-server/model/ctype"
+
 type ChatModel struct {
 	MODEL    `json:","`
 	NickName string        `gorm:"size:15" json:"nick_name"`
