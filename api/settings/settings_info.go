@@ -2,12 +2,11 @@ package settings
 
 import (
 	"github.com/gin-gonic/gin"
+	"gvb-server/global"
 	"gvb-server/model/res"
 )
 
-// SettingsInfoView 是settings的一个具体路由对应的方法
+// SettingsInfoView 查寻网站信息
 func (SettingsApi) SettingsInfoView(c *gin.Context) {
-	res.Ok("成功", map[string]any{
-		"system_name": "GVB",
-	}, c)
+	res.OkWithData(global.Config.SiteInfo, c)
 }

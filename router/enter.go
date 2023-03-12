@@ -19,7 +19,7 @@ func InitRouter() *gin.Engine {
 	apiRouterGroup := router.Group("/api") // 初始化api路由组
 
 	routerGroupApp := RouterGroup{apiRouterGroup} // 初始化路由组
-	// 系统配置api
+
 	routerGroupApp.SettingsRouter() // 注册settings路由
 
 	return router
