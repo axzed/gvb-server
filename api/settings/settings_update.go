@@ -18,7 +18,7 @@ func (SettingsApi) SettingsInfoUpdateView(c *gin.Context) {
 		return
 	}
 	global.Config.SiteInfo = cr // 将绑定的修改好的系统配置信息赋值给全局变量
-	err = core.SetYaml()
+	err = core.SetYaml()        // 将修改好的系统配置信息写入到yaml文件中
 	if err != nil {
 		global.Log.Error(err)
 		res.FailWithMessage(err.Error(), c)
